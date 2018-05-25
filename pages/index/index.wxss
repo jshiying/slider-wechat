@@ -1,0 +1,45 @@
+/**index.wxss**/
+.show_swiper{
+  /* background-color:#040519; */
+  overflow: hidden;
+}
+.show_swiper_list{
+  height: 270px
+}
+.swiper_item{
+  float:left
+}
+/* .swiper_item.prev{
+  margin-right:-100rpx;
+}
+.swiper_item.next{
+  margin-left:-100rpx;
+   position: relative;
+  z-index: -1;
+} */
+
+.swiper_item.zgc{
+  position: relative;
+  z-index: 1000;
+}
+ .swiper_item:nth-child(odd){
+  background-color: lightgreen;
+  
+}
+.swiper_item:nth-child(even){
+  background-color: lightgreen;
+} 
+.swiper_item.light{
+  position:relative;
+  z-index: 1000;
+}
+.swiper_item.prev{
+  background-color: #f00;
+  opacity: 0.5;
+  margin-right:-100rpx;
+}
+ .swiper_item.next{
+  background-color: #0ff;
+  opacity: 0.5;
+  margin-left:-100rpx;
+} 
