@@ -5,19 +5,19 @@
         bindtouchstart='swiperTouchstart'
         bindtouchmove='swiperTouchmove'
         bindtouchend='swiperTouchend'
-        style='width: {{allWidth}}px;position: relative;left: {{-itemWidth*1.2}}px;'>
+        style='width: 2090px;height:694rpx;position: relative;left: {{-itemWidth*0.56}}px;border:1px solid;'>
 
     <block wx:for="{{swiperList}}">
-       <view class='swiper_item {{curIndex==index ? "light":""}} {{index==prev ? "prev":""}} {{index==next ? "next":""}}' 
-            data-curid="{{curIndex}}" 
+       <view class='swiper_item {{team_curIndex==index ? "light":""}} {{index==team_prev ? "team_prev":""}} {{index==team_next ? "team_next":""}}' 
+            data-curid="{{team_curIndex}}" 
             data-index='{{index}}' 
-            animation="{{curIndex == index? animationToLarge : animationToSmall}}" 
-            style='width: {{itemWidth}}px;height: {{itemWidth*1.4}}px;transform: scale({{curIndex == index ? 1 : scale}});-'>
+            animation="{{team_curIndex == index? animationToLarge : animationToSmall}}" 
+            style='width:416rpx;height:694rpx;transform: scale({{team_curIndex == index ? 1 : scale}});-'>
 
-          {{item}}
-          
+          <image class='' src='{{item.person_src}}' style='width:416rpx;height:694rpx;'></image>
+          <view class='mengceng'></view>          
       </view>
     </block>
-
   </view>
+  <image wx:if='{{team_curIndex==index}}'  wx:for="{{swiperList}}" src='{{item.intro_src}}' class='person_intro'></image>
 </view>

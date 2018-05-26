@@ -1,7 +1,7 @@
 /**index.wxss**/
 .show_swiper{
-  /* background-color:#040519; */
   overflow: hidden;
+  position: relative;
 }
 .show_swiper_list{
   height: 270px
@@ -9,37 +9,55 @@
 .swiper_item{
   float:left
 }
-/* .swiper_item.prev{
-  margin-right:-100rpx;
-}
-.swiper_item.next{
-  margin-left:-100rpx;
-   position: relative;
-  z-index: -1;
-} */
-
 .swiper_item.zgc{
   position: relative;
   z-index: 1000;
 }
- .swiper_item:nth-child(odd){
-  background-color: lightgreen;
-  
-}
-.swiper_item:nth-child(even){
-  background-color: lightgreen;
-} 
+
 .swiper_item.light{
   position:relative;
   z-index: 1000;
 }
-.swiper_item.prev{
-  background-color: #f00;
+.swiper_item.team_prev{
   opacity: 0.5;
-  margin-right:-100rpx;
+  margin-right:-210rpx;
 }
- .swiper_item.next{
-  background-color: #0ff;
+ .swiper_item.team_next{
   opacity: 0.5;
-  margin-left:-100rpx;
+  margin-left:-190rpx;
 } 
+.person_intro{
+  position: absolute;
+  width:646rpx;
+  height: 315rpx;
+  top:500rpx;
+  left:50%;
+  margin-left:-323rpx;
+  display: none; 
+  z-index: 2000;  
+}
+.person_intro{
+    display: block;  
+   animation: jieshao 1s;
+}
+@keyframes jieshao{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.mengceng{
+  width:295rpx;
+  height: 694rpx;
+  position: absolute;
+  left: 50%;
+  margin-left:-145rpx;
+  top:0;
+  background: #040417;
+  opacity:0.6;
+}
+.swiper_item.light .mengceng{
+  opacity:0;
+}
