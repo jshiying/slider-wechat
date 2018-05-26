@@ -1,5 +1,18 @@
 <!--index.wxml-->
-<!-- 备用right: {{(allWidth-winWidth)/2}}px -->
+<!--底部背景  -->
+  <view class='area'>
+     <view class='point' id='point_1'></view>
+    <view class='point' id='point_2'></view>
+    <view class='point' id='point_3'></view>
+    <view class='point' id='point_4'></view>
+    <view class='point' id='point_5'></view>
+    <view class='point' id='point_6'></view>
+    <view class='point' id='point_7'></view>
+    <view class='point' id='point_8'></view>
+    <view class='point' id='point_9'></view>
+    <view class='point' id='point_10'></view> 
+  </view>
+
 <view class="show_swiper" style='width: {{winWidth}}px;height: {{winHeight}}px;'>
   <view class='show_swiper_list'
         bindtouchstart='swiperTouchstart'
@@ -15,9 +28,9 @@
             style='width:416rpx;height:694rpx;transform: scale({{team_curIndex == index ? 1 : scale}});-'>
 
           <image class='' src='{{item.person_src}}' style='width:416rpx;height:694rpx;'></image>
-          <view class='mengceng'></view>          
+           <view class='mengceng'></view>           
       </view>
     </block>
   </view>
-  <image wx:if='{{team_curIndex==index}}'  wx:for="{{swiperList}}" src='{{item.intro_src}}' class='person_intro'></image>
+   <image wx:if='{{team_curIndex==index}}'  wx:for="{{swiperList}}" src='{{item.intro_src}}' class='person_intro'></image> 
 </view>

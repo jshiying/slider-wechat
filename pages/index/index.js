@@ -6,7 +6,7 @@ Page({
     team_curIndex: 2,  //当前显示的view下标
     team_prev:1,
     team_next:3,
-    
+   
     swiperList: [
       { 'person_src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527324788361&di=a7760b6d3349b4d782df4d5c59b3ead3&imgtype=0&src=http%3A%2F%2Fimg03.tooopen.com%2Fuploadfile%2Fdowns%2Fimages%2F20110714%2Fsy_20110714135215645030.jpg', 'intro_src': 'http://img3.imgtn.bdimg.com/it/u=2358689708,1558820&fm=214&gp=0.jpg' },
       { 'person_src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527324788349&di=70d17984c39bbd553bb95c504444ba51&imgtype=0&src=http%3A%2F%2Fpic36.nipic.com%2F20131213%2F6704106_223232205107_2.png', 'intro_src': 'http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=468315030324ab18f41be9745d938cb8/962bd40735fae6cd6f6c5b4405b30f2442a70f3e.jpg' },
@@ -146,7 +146,7 @@ Page({
       },
     })
     this.animation = wx.createAnimation({
-      transformOrigin: "50% 50%",
+      // transformOrigin: "50% 50%",
       duration: 800,
       timingFunction: "ease-out",
       delay: 0

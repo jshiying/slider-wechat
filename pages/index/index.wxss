@@ -1,7 +1,63 @@
 /**index.wxss**/
+/*底部背景  */
+@keyframes ripple{
+  0%{opacity:1;transform: scale(1.08);}
+  100%{opacity:0;transform: scale(4.5);}
+}
+
+.area{
+  width:200rpx;
+  height: 200rpx;
+  position: fixed;
+  left: 50%;
+  margin-left: -100rpx;
+  top:37%;
+  z-index: 1;
+}
+.point{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top:0;
+  left:0;
+  border: 1.2px solid #2c455c;  
+}
+#point_1{
+  animation: ripple 10s linear 0s infinite;
+}
+#point_2{
+  animation: ripple 10s linear 1s infinite;
+}
+#point_3{
+  animation: ripple 10s linear 2s infinite;
+}
+#point_4{
+  animation: ripple 10s linear 3s infinite;
+}
+#point_5{
+  animation: ripple 10s linear 4s infinite;
+}
+#point_6{
+  animation: ripple 10s linear 5s infinite;
+}
+#point_7{
+  animation: ripple 10s linear 6s infinite;
+}
+#point_8{
+  animation: ripple 10s linear 7s infinite;
+}
+#point_9{
+  animation: ripple 10s linear 8s infinite;
+}
+#point_10{
+  animation: ripple 10s linear 9s infinite;
+}
+/*主内容  */
 .show_swiper{
   overflow: hidden;
   position: relative;
+   background: #040417; 
 }
 .show_swiper_list{
   height: 270px
@@ -16,15 +72,19 @@
 
 .swiper_item.light{
   position:relative;
-  z-index: 1000;
+  z-index: 10000;
 }
 .swiper_item.team_prev{
-  opacity: 0.5;
   margin-right:-210rpx;
+  position: relative;
+  z-index: 1000;
+  
 }
  .swiper_item.team_next{
-  opacity: 0.5;
   margin-left:-190rpx;
+  position: relative;
+  z-index: 1000;
+ 
 } 
 .person_intro{
   position: absolute;
@@ -34,7 +94,7 @@
   left:50%;
   margin-left:-323rpx;
   display: none; 
-  z-index: 2000;  
+  z-index: 20000;  
 }
 .person_intro{
     display: block;  
@@ -49,14 +109,15 @@
   }
 }
 .mengceng{
-  width:295rpx;
+  width:420rpx;
   height: 694rpx;
   position: absolute;
   left: 50%;
-  margin-left:-145rpx;
+  margin-left:-210rpx;
   top:0;
   background: #040417;
   opacity:0.6;
+
 }
 .swiper_item.light .mengceng{
   opacity:0;
