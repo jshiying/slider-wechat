@@ -14,12 +14,8 @@ Page({
       { 'person_src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527324788357&di=db45b1affb62ac9fabf70e119cdc150c&imgtype=0&src=http%3A%2F%2Fimg05.tooopen.com%2Fimages%2F20140328%2Fsy_57865838889.jpg', 'intro_src': 'http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=468315030324ab18f41be9745d938cb8/962bd40735fae6cd6f6c5b4405b30f2442a70f3e.jpg' },
       { 'person_src': 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527324788351&di=a955634d047b94386264e07cc1918cae&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F13%2F68%2F11%2F35W58PICzbv_1024.jpg', 'intro_src': 'http://img3.imgtn.bdimg.com/it/u=2358689708,1558820&fm=214&gp=0.jpg' },
     ], //轮播数据列表
-    winWidth: 0,  //设备宽度；
-    winHeight: 0,   //设备高度；
 
     itemWidth:416, //单个轮播图swiper-item的宽度；
-    itemHeight: 0,//单个轮播图swiper-item的高度；
-    allWidth: 0,  //轮播展示 swiper的总宽度；
     scale: 0.7,   //  缩放大小倍数；
 
     startClinetX: '', //触摸开始位置；
@@ -39,11 +35,6 @@ Page({
       startTimestamp: e.timeStamp, //触摸开始时间；
     })
   },
-
-  //触摸移动中的事件
-  swiperTouchmove: function (e) {
-  },
-
   //触摸结束事件
   swiperTouchend: function (e) {
     let times = e.timeStamp - this.data.startTimestamp, //时间间隔；
@@ -131,22 +122,7 @@ Page({
 
   onLoad: function () {
     var that = this
-
-    wx.getSystemInfo({
-      success: function (res) {
-        let w = res.windowWidth, h = res.windowHeight;
-        let allWidth = that.data.swiperList.length * (w * 0.5);
-
-        that.setData({
-          winWidth: w,
-          winHeight: h,
-          // itemWidth: w * 0.5,
-          allWidth: allWidth
-        })
-      },
-    })
     this.animation = wx.createAnimation({
-      // transformOrigin: "50% 50%",
       duration: 800,
       timingFunction: "ease-out",
       delay: 0
